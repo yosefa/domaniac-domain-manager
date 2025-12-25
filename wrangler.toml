@@ -9,4 +9,4 @@ database_id = "84c29e2a-bbc1-403e-83a6-c216741eebe8"
 
 [vars]
 JWT_EXPIRY = "24h"
-REGISTRATION_ENABLED = "true"
+REGISTRATION_ENABLED = "false"
