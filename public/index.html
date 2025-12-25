@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domaniac - Domain Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/react-datepicker@7.3.0/dist/react-datepicker.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              600: '#475569',
+              500: '#64748b',
+              400: '#94a3b8',
+              300: '#cbd5e1',
+              200: '#e2e8f0',
+              100: '#f1f5f9',
+            },
+            primary: {
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+
+    /* Custom scrollbar for webkit */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #475569;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* React Datepicker Dark Mode Overrides */
+    .react-datepicker {
+      background-color: #1e293b !important;
+      border-color: #334155 !important;
+      font-family: inherit !important;
+      color: #e2e8f0 !important;
+    }
+
+    .react-datepicker__header {
+      background-color: #0f172a !important;
+      border-bottom-color: #334155 !important;
+      border-top-left-radius: 0.3rem !important;
+      border-top-right-radius: 0.3rem !important;
+    }
+
+    .react-datepicker__current-month,
+    .react-datepicker__day-name {
+      color: #e2e8f0 !important;
+    }
+
+    .react-datepicker__day {
+      color: #e2e8f0 !important;
+    }
+
+    .react-datepicker__day:hover {
+      background-color: #334155 !important;
+    }
+
+    .react-datepicker__day--selected,
+    .react-datepicker__day--keyboard-selected {
+      background-color: #4f46e5 !important;
+      color: white !important;
+    }
+
+    .react-datepicker__day--disabled {
+      color: #475569 !important;
+    }
+
+    .react-datepicker__triangle {
+      display: none !important;
+    }
+
+    .react-datepicker-wrapper {
+      width: 100%;
+    }
+
+    .react-datepicker__input-container input {
+      width: 100%;
+    }
+
+    .react-datepicker__month-container {
+      background-color: #1e293b !important;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-datepicker": "https://esm.sh/react-datepicker@7.3.0?external=react,react-dom",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.1"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>

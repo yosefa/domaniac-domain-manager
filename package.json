@@ -1,0 +1,27 @@
+{
+  "name": "domaniac---domain-manager",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --outfile=public/js/app.js --format=esm --jsx=automatic --loader:.tsx=tsx --external:react --external:react-dom --external:react-datepicker",
+    "dev": "npm run build && wrangler pages dev public --d1 DB=domain_manager --compatibility-date=2024-12-25",
+    "deploy": "npm run build && wrangler pages deploy public",
+    "db:create": "wrangler d1 create domain_manager",
+    "db:migrate:local": "wrangler d1 execute domain_manager --local --file=./migrations/0001_initial.sql",
+    "db:migrate:remote": "wrangler d1 execute domain_manager --remote --file=./migrations/0001_initial.sql"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-datepicker": "7.3.0",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "esbuild": "^0.24.2",
+    "typescript": "~5.8.2",
+    "wrangler": "^3.95.0"
+  }
+}
